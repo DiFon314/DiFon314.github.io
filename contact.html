@@ -25,10 +25,6 @@
 
     <div class="info-container">
 
-        <h1>Entrar em contato</h1>
-
-        <p>Diga-me se tem algum projeto para ser feito</p>
-
         <div class="box-container">
 
             <div class="box">
@@ -69,26 +65,35 @@
         
     </div>
 
+
     <form action="">
 
+        <h2>Mande um email</h2>
+        <p>Diga-me se tem algum projeto para ser feito</p>
         <div class="inputBox">
-            <input type="text" placeholder="seu nome">
-            <input type="number" placeholder="seu numero (opcional)">
+            <input type="text" placeholder="seu nome"id="nome">
+            <input type="number" placeholder="seu numero (opcional)"id="numero">
         </div>
 
         <div class="inputBox">
-            <input type="email" placeholder="seu email">
-            <input type="text" placeholder="o assunto">
+            <input type="email" placeholder="seu email"id="email">
+            <input type="text" placeholder="o assunto"id="assunto" >
         </div>
 
-        <textarea name="" placeholder="sua mensagem" id="" cols="30" rows="10"></textarea>
+        <textarea name="" placeholder="sua mensagem" id="" cols="30" rows="10"id="texto"></textarea>
 
-        <input type="submit" value="enviar a mensagem" class="btn">
+        <input type="submit" value="enviar a mensagem" class="btn"id="botão" onclick="clicar">
 
     </form>
 
 </div>
 
 </section>
+<script>
+function clicar(){
+    var nome = window.document.querySelector('input#nome')
+    document.write(nome)
+}
+</script>
 </body>
 </html>
