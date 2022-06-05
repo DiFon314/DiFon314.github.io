@@ -30,7 +30,7 @@
             <div class="box">
                 <i class="fas fa-map"></i>
                 <div class="info">
-                    <h3>Edereço :</h3>
+                    <h3>Endereço :</h3>
                     <p>Porto Velho, RO</p>
                 </div>
             </div>
@@ -62,38 +62,39 @@
         </div>
 
         
+       
         
     </div>
 
 
     <form action="">
 
-        <h2>Mande um email</h2>
+        <h2>Mande uma mensagem</h2>
         <p>Diga-me se tem algum projeto para ser feito</p>
         <div class="inputBox">
             <input type="text" placeholder="seu nome"id="nome">
-            <input type="number" placeholder="seu numero (opcional)"id="numero">
+            <input type="phone" placeholder="seu numero (69)993788087"id="numero">
         </div>
 
-        <div class="inputBox">
-            <input type="email" placeholder="seu email"id="email">
-            <input type="text" placeholder="o assunto"id="assunto" >
-        </div>
-
-        <textarea name="" placeholder="sua mensagem" id="" cols="30" rows="10"id="texto"></textarea>
-
-        <input type="submit" value="enviar a mensagem" class="btn"id="botão" onclick="clicar">
+        <textarea name="" placeholder="sua mensagem" id="mensagem" cols="30" rows="10"></textarea>
+        
+        <div id="console-container"></div>
+        <input type="button" value="enviar a mensagem" class="btn"id="botão">
 
     </form>
 
 </div>
-
 </section>
-<script>
-function clicar(){
-    var nome = window.document.querySelector('input#nome')
-    document.write(nome)
-}
-</script>
+<script src="javascript/script.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+<!-- <script>
+    function clicar(){
+        var nome = window.document.querySelector('input#nome')
+        document.write(nome)
+    }
+    </script> -->
 </body>
 </html>

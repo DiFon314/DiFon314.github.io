@@ -1,11 +1,8 @@
-let phone = document.getElementById('numero')
-let message = document.getElementById('mensagem')
-let nome = document.getElementById('nome')
-let email = document.getElementById('email')
-let assunto = document.getElementById('assunto')
+let phone = document.getElementById('phone')
+let message = document.getElementById('message')
 
 // buttons
-let linkHandler = document.getElementById('botão')
+let linkHandler = document.getElementById('by-link')
 
 // font: 
 let isMobile = (function(a) {
@@ -13,7 +10,7 @@ let isMobile = (function(a) {
         return true
     } else {
         return false
-    } 
+    }
 })(navigator.userAgent || navigator.vendor || window.opera)
 
 const makeLink = function() {
@@ -24,23 +21,17 @@ const makeLink = function() {
             if ( !!phone && phone.value !== '' ) {
                 target += `phone=${encodeURIComponent(phone.value)}&`
             }
-            if ( !!nome && nome.value !== '' ) {
-                target += `text=Meu nome é ${encodeURIComponent(nome.value)}`
-            }
-            if ( !!mensagem && mensagem.value !== '' ) {
-                target += ` e eu gostaria de falar sobre:${encodeURIComponent(mensagem.value)}`
+            if ( !!message && message.value !== '' ) {
+                target += `text=${encodeURIComponent(message.value)}`
             }
             return target
-        }else {
-            let target = `https://api.whatsapp.com/send?` 
+        } else {
+            let target = `https://api.whatsapp.com/send?`
             if ( !!phone && phone.value !== '' ) {
                 target += `phone=${encodeURIComponent(phone.value)}&`
             }
-            if ( !!nome && nome.value !== '' ) {
-                target += `text=Meu nome é ${encodeURIComponent(nome.value)}`
-            }
-            if ( !!mensagem && mensagem.value !== ''  ) {
-                target += ` e eu gostaria de falar sobre:${encodeURIComponent(mensagem.value)}`
+            if ( !!message && message.value !== '' ) {
+                target += `text=${encodeURIComponent(message.value)}`
             }
             return target
         }
@@ -48,15 +39,13 @@ const makeLink = function() {
     }
 
     let openLink = function() {
-        if (!!phone && phone.value == '' || !!nome && nome.value == '' || !!mensagem && mensagem.value == '' ) {
-            console.log('funcionou')
-        }else{
-            $('#console-container').append(`${mount()}`)
-        }
+        $('#console-container').append(`${mount()}`)
     }
-    
     openLink()
 } 
+
+
+
 
 // events handler(s)
 linkHandler.addEventListener('click', function() {
