@@ -21,10 +21,10 @@ const makeLink = function() {
 
     let mount = function() {
         if ( isMobile ) {
-            let target = `whatsapp://send?phone=(69)993788087&text=Meu nome é ${encodeURIComponent(nome.value)} e eu gostaria de falar sobre, ${encodeURIComponent(assunto.value)}: ${encodeURIComponent(mensagem.value)}`
+            let target = `whatsapp://send?phone=+55(69)993788087&text=Meu nome é ${encodeURIComponent(nome.value)} e eu gostaria de falar sobre, ${encodeURIComponent(assunto.value)}: ${encodeURIComponent(mensagem.value)}`
             return target
         }else {
-            let target = `https://api.whatsapp.com/send?phone=(69)993788087&text=Meu nome é ${encodeURIComponent(nome.value)} e eu gostaria de falar sobre, ${encodeURIComponent(assunto.value)}: ${encodeURIComponent(mensagem.value)}`
+            let target = `https://api.whatsapp.com/send?phone=+55(69)993788087&text=Meu nome é ${encodeURIComponent(nome.value)} e eu gostaria de falar sobre, ${encodeURIComponent(assunto.value)}: ${encodeURIComponent(mensagem.value)}`
             return target
         }
     
