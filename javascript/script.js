@@ -1,7 +1,7 @@
-let phone = document.getElementById('numero')
+// let phone = document.getElementById('numero')
 let message = document.getElementById('mensagem')
 let nome = document.getElementById('nome')
-let email = document.getElementById('email')
+// let email = document.getElementById('email')
 let assunto = document.getElementById('assunto')
 
 let linkHandler = document.getElementById('botão')
@@ -33,23 +33,14 @@ const makeLink = function() {
             }
             return target
         }else {
-            let target = `https://api.whatsapp.com/send?` 
-            if ( !!phone && phone.value !== '' ) {
-                target += `phone=${encodeURIComponent(phone.value)}&`
-            }
-            if ( !!nome && nome.value !== '' ) {
-                target += `text=Meu nome é ${encodeURIComponent(nome.value)}`
-            }
-            if ( !!mensagem && mensagem.value !== ''  ) {
-                target += ` e eu gostaria de falar sobre: ${encodeURIComponent(mensagem.value)}`
-            }
+            let target = `https://api.whatsapp.com/send?phone=(69)993788087&text=Meu nome é ${encodeURIComponent(nome.value)} e eu gostaria de falar sobre, ${encodeURIComponent(assunto.value)}: ${encodeURIComponent(mensagem.value)}`
             return target
         }
     
     }
 
     let openLink = function() {
-        if (!!phone && phone.value == '' || !!nome && nome.value == '' || !!mensagem && mensagem.value == '' ) {
+        if (!!assunto && assunto.value == '' || !!nome && nome.value == '' || !!mensagem && mensagem.value == '' ) {
             alert("Preencha todos os campos");
         }else{
             const win = window.open(`${mount()}`,'_blank')
