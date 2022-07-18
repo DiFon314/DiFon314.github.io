@@ -153,9 +153,12 @@ section {
 }
 
 .home .image img {
-  height: 50rem;
-  width: 50rem;
-  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  height: 44rem;
+  border-top-left-radius: 30% 30%;
+  border-top-right-radius: 70% 30%;
+  border-bottom-right-radius: 70% 70%;
+  border-bottom-left-radius: 40% 70%;
+  /* border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; */
 }
 
 .home .content {
